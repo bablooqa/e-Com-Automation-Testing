@@ -1,0 +1,24 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+driver = webdriver.Chrome()
+
+
+def setup_teardown():
+    driver.get("https://ecommerce-playground.lambdatest.io/index.php?route=account/login")
+    driver.find_element(By.ID, "input-email")\
+        .send_keys("PytestSelenium@gmail.com")
+    driver.find_element(By.ID,"input-password")\
+        .send_keys("")
+
+
+def test1(): 
+    print("Log In")
+    print("Exexcute Test 1")
+    print("Log Out")
+    
+    
+def test2():
+    print("Log In")
+    print("Exexcute Test 2 ")
+    print("Log Out")
